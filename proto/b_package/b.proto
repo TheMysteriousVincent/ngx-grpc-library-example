@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ngx_grpc_library_example.b_package;
+
+import "a.proto";
+
+message B_Message {
+  int32 id = 1;
+  string description = 2;
+
+  ngx_grpc_library_example.A_Message a_message = 3;
+}
+
+service B_Service {
+  rpc GetA_Message(B_Message) returns (B_Message) {}
+}
