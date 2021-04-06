@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package ngx_grpc_library_example.b_package;
 
+option ngx_module = "@ngx-grpc-library-example/test/b_package";
+
 import "a.proto";
 
 message B_Message {
